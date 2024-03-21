@@ -155,6 +155,11 @@ Let’s make a few final adjustments to the `<nav>`. It would look better in the
   
   Notice how we’re taking a slightly different approach to targeting. Even though we didn’t assign a class to this `<ul>`, we can target it specifically by adding the parent element into the rule. Because this `<ul>` is inside the `<nav>`, we’ll write `nav ul` in the rule. Leaving a space between these two elements indicates the parent/child relationship.
 
+    <iframe height="300" style="width: 100%;" scrolling="no" title="Cleaning Up Our Nav" src="https://codepen.io/GAmarketing/embed/eYoBPLJ?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/GAmarketing/pen/eYoBPLJ">
+      Cleaning Up Our Nav</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
+      on <a href="https://codepen.io">CodePen</a>.
+    </iframe>
   ---
 
 <h1 class="slide-header">Everything is a Box</h1>
@@ -242,6 +247,12 @@ To fix it, add in the CSS rule below. Because we only want to apply this sizing 
 ```
 
 We only need to set the width of the images, as the browser will automatically adjust the height proportionally. In other words, our images won’t get distorted! If we set a defined height _as well as_ a defined width, we could end up stretching them out.
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="Adjusting Width and Height" src="https://codepen.io/GAmarketing/embed/JjVbmaN?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/GAmarketing/pen/JjVbmaN">
+  Adjusting Width and Height</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ---
 
