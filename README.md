@@ -74,14 +74,14 @@ All HTML elements have some default styling; `<h1>`s are always bigger than `<h2
 
   Headings are perfect examples of block elements. See how they stack on top of each other in the order they are added?
 
-![](https://ga-instruction.s3.amazonaws.com/assets/intro-tech/css-unit-assets/block-element.png)
+<img src="https://ga-instruction.s3.amazonaws.com/assets/intro-tech/css-unit-assets/block-element.png">
 </details>
 
 <details>
   <summary>Inline Elements</summary>
-  An `<a>` tag is an inline element. See how it lines up on the same level as the adjacent elements instead of beginning a new line?
+  An anchor tag is an inline element. See how it lines up on the same level as the adjacent elements instead of beginning a new line?
 
-    ![](https://ga-instruction.s3.amazonaws.com/assets/intro-tech/css-unit-assets/inline.png)
+    <img src="https://ga-instruction.s3.amazonaws.com/assets/intro-tech/css-unit-assets/inline.png">
 </details>
 
 ---
@@ -155,7 +155,7 @@ Let’s make a few final adjustments to the `<nav>`. It would look better in the
   
   Notice how we’re taking a slightly different approach to targeting. Even though we didn’t assign a class to this `<ul>`, we can target it specifically by adding the parent element into the rule. Because this `<ul>` is inside the `<nav>`, we’ll write `nav ul` in the rule. Leaving a space between these two elements indicates the parent/child relationship.
 
-    <iframe height="300" style="width: 100%;" scrolling="no" title="Cleaning Up Our Nav" src="https://codepen.io/GAmarketing/embed/eYoBPLJ?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+    <iframe   sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Cleaning Up Our Nav" src="https://codepen.io/GAmarketing/embed/eYoBPLJ?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
       See the Pen <a href="https://codepen.io/GAmarketing/pen/eYoBPLJ">
       Cleaning Up Our Nav</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
       on <a href="https://codepen.io">CodePen</a>.
@@ -248,7 +248,7 @@ To fix it, add in the CSS rule below. Because we only want to apply this sizing 
 
 We only need to set the width of the images, as the browser will automatically adjust the height proportionally. In other words, our images won’t get distorted! If we set a defined height _as well as_ a defined width, we could end up stretching them out.
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Adjusting Width and Height" src="https://codepen.io/GAmarketing/embed/JjVbmaN?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe   sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Adjusting Width and Height" src="https://codepen.io/GAmarketing/embed/JjVbmaN?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/GAmarketing/pen/JjVbmaN">
   Adjusting Width and Height</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -262,9 +262,9 @@ Let’s try this out with the images of Hannah’s artwork! Right now, they are 
 
 Before jumping into the code, think through how you’d target those `<img>`s specifically. In the HTML, they’re grouped together in a `<div>`. What could we add to the `<div>` to make it easier to target the `<img>`s it contains?
 
-<details>
-  <summary>Reveal Answer</summary>
-  Here’s how we did it.
+---
+
+<h1 class="slide-header">Here's How We Did It</h1>
 
 We added an ID to the `<div>` surrounding the images so that we could target them specifically. (A class could also work here, and you could name it whatever you want.) 
 
@@ -282,7 +282,6 @@ Then, we added a CSS rule targeting the images in the `<div>` with a `width` pro
  width: 250px;
 }
 ```
-</details>
 
 ---
 
