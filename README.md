@@ -368,7 +368,6 @@ What type of positioning would we use?
 
 And here are some more resources on CSS layouts:
 * <a href="http://learnlayout.com/display.html" target="_blank" rel="noreferrer noopener">Display Property</a>.
-* <a href="https://internetingishard.com/html-and-css/css-box-model//" target="_blank" rel="noreferrer noopener">A box model overview</a>.
 * <a href="http://learnlayout.com/position.html" target="_blank" rel="noreferrer noopener">Positioning in CSS</a>.
 
 </textarea>
