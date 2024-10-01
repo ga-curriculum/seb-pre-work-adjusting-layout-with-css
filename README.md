@@ -327,6 +327,8 @@ If we add in some relative positioning to the top yellow `<div>`...
 ```
 ... we’d end up with the format on the right! The `position-relative` property will push the yellow block 100px away from where it started at the top and 100px away from where it started at the left.
 
+<img src="https://ga-instruction.s3.amazonaws.com/assets/intro-tech/css-unit-assets/no-positioning-relative-positioning.png">
+
 ---
 
 <h1 class="slide-header">Position: Absolute</h1>
