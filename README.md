@@ -1,11 +1,16 @@
-<textarea id="source">
+<!-- <textarea id="source"> -->
 
 <h1 class="slide-header">Adjusting Layout with CSS</h1>
 
 <span id=time-estimate class="color-grey-500">30 mins</span>
 
 <p id="lesson-description">
-  Have you ever tried to find something on a website only to realize you had no idea where to look? Once you understand how to create website layouts in CSS, you’ll never subject your users to that frustration again.
+Have you ever visited a website and had no idea where to look? A cluttered, unorganized layout can make even the best content frustrating to navigate.
+
+With CSS, you have the power to **structure your website** exactly how you want. You'll learn how to control spacing, alignment, and positioning to create a layout that looks great and guides users effortlessly.
+
+By the end of this lesson, you’ll be designing pages that are **clean, professional, and easy to navigate**—no more confusing websites!
+
 </p>
 
 <h5 id="topics-header" class="color-grey-500">Topics</h5>
@@ -22,7 +27,7 @@ Positioning
 
 <hr>
 
-<a href="https://ga-create-api.s3.amazonaws.com/studyguides/adjusting-layout-with-css-1927d7.pdf" target="_blank" download="adjusting_layout_with_css_study_guide.pdf" class="ant-btn" data-trackable="true" data-track-category="study guide" data-track-section="lesson page" data-track-action="download study guide"><span role="img" class="anticon"><svg viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><g class="download_svg__nc-icon-wrapper"><path d="M8 12c.3 0 .5-.1.7-.3L14.4 6 13 4.6l-4 4V0H7v8.6l-4-4L1.6 6l5.7 5.7c.2.2.4.3.7.3z"></path><path data-color="color-2" d="M1 14h14v2H1z"></path></g></svg></span><span> Download Study Guide</span></a>
+<a href="./assets/adjusting_layout_with_css_study_guide.pdf" target="_blank" download="adjusting_layout_with_css_study_guide.pdf" class="ant-btn" data-trackable="true" data-track-category="study guide" data-track-section="lesson page" data-track-action="download study guide"><span role="img" class="anticon"><svg viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><g class="download_svg__nc-icon-wrapper"><path d="M8 12c.3 0 .5-.1.7-.3L14.4 6 13 4.6l-4 4V0H7v8.6l-4-4L1.6 6l5.7 5.7c.2.2.4.3.7.3z"></path><path data-color="color-2" d="M1 14h14v2H1z"></path></g></svg></span><span> Download Study Guide</span></a>
 
 ---
 
@@ -37,66 +42,76 @@ Positioning
 </ul>
 
 ---
+
 <h1 class="slide-header">Connecting With Our Client</h1>
 
-We’ve made some great progress on Hannah’s portfolio page. She now has some unique fonts and colors that make the text pop. 
+Hannah’s portfolio is coming to life with unique fonts and colors—but the layout still needs work.
 
-But the images of her work still look kind of funny, right? And the navigation bar — the list of links to other pages on the site — doesn’t look very navigable.
+Right now, her **navigation links are stacked** instead of sitting neatly in a row, and the **social media icons in the footer** have the same issue. Plus, everything feels a little cramped—there’s no spacing between elements!
 
-In this lesson, we’ll learn how to move these images and list items to make a more visually appealing site.
+In this lesson, we’ll learn how to **align navigation links, organize the social icons, and create better spacing** using **margin and padding**. We’ll also explore **positioning and display** techniques to control how elements are arranged, helping the site look polished, balanced, and easy to navigate!
 
-![link text](https://ga-instruction.s3.amazonaws.com/assets/intro-tech/css-unit-assets/lesson2-start.png)
+<img src="./assets/website-progress-2.png" alt="Website Progress" style="width:800px;"/>
 
 ---
 
-<h1 class="slide-header">Display Basics</h1>
+<h1 class="slide-header">Understanding Display: Block vs. Inline</h1>
 
-All HTML elements have some default styling; `<h1>`s are always bigger than `<h2>`s, `<ul>`s always have solid black bullets, etc.
+Every HTML element has **default styling**, like `<h1>` being larger than `<h2>` or `<ul>` having bullet points. But did you know that elements also have a **default way of displaying** on a webpage?
 
-  Likewise, all HTML elements have a default way of being displayed on a page: as either a **block element** or an **inline element**.
-  
-  | Block Elements | Inline Elements |
-  | -- | -- |
-  | Always starts on a new line. | Sit within the content that surrounds them. | 
-  | Take up the full width available on the screen. | Only take up as much width as necessary. | 
-  | Stack on top of each other when new ones are added. | Render in one line. |
-  | Can have set margins, padding, widths, or heights. | Cannot have set margins or padding. |
-  | `<h1-6>`, `<div>`, `<p>`, `<ul>`, etc. | `<a>`, `<span>`, `<img>`, etc. |
-  
-  Want to see a visual? Click to the next slide.
+HTML elements are either **block elements** or **inline elements**.
+
+| **Block Elements**                                     | **Inline Elements**                                   |
+| ------------------------------------------------------ | ----------------------------------------------------- |
+| Always start on a **new line**.                        | Stay **within the same line** as surrounding content. |
+| Take up the **full width** of the container.           | Only take up as much width as needed.                 |
+| Stack **vertically** when multiple are added.          | Appear **side by side** if space allows.              |
+| Can have **margin, padding, width, and height**.       | Cannot have set margins, width, or height.            |
+| Examples: `<h1>` - `<h6>`, `<div>`,<br> `<p>`, `<ul>`. | Examples: `<a>`, `<span>`, `<img>`.                   |
+
+These default behaviors affect how elements are arranged on a page. Want to see a visual? Click to the next slide!
 
 ---
 
 <h1 class="slide-header">Block vs. Inline Elements</h1>
 
-<details>
-  <summary>Block Elements</summary>
+**Block Elements**
 
-  Headings are perfect examples of block elements. See how they stack on top of each other in the order they are added?
+- Block elements **always start on a new line** and take up the full width available.
+- As you add more block elements, they **stack on top of each other**, creating a vertical structure.
 
-<img src="https://ga-instruction.s3.amazonaws.com/assets/intro-tech/css-unit-assets/block-element.png">
-</details>
+<img src="./assets/block-elements.png" alt="Block Elements" style="width:800px;"/>
 
-<details>
-  <summary>Inline Elements</summary>
-  An anchor tag is an inline element. See how it lines up on the same level as the adjacent elements instead of beginning a new line?
+<br>
 
-    <img src="https://ga-instruction.s3.amazonaws.com/assets/intro-tech/css-unit-assets/inline.png">
-</details>
+**Inline Elements**
+
+- Inline elements **stay within the same line** as surrounding content.
+- They only take up as much space as needed and **don’t force a new line**.
+
+<img src="./assets/inline-elements.png" alt="Inline Elements" style="width:800px;"/>
+
+Anchor `<a>`, span `<span>`, and image `<img>` elements all line up **side by side** instead of stacking by default.
 
 ---
 
-<h1 class="slide-header">Changing the Display</h1>
+<h1 class="slide-header">Changing the Display of Elements</h1>
 
-What do we do when we have an element that is _naturally_ inline, such as an `<img>`, but we want to display it as a _block_ element? Or, when we have a natural block element, like a `<ul>`, but we want to display it all on one line, like an inline element?
+Sometimes, an element’s default behavior doesn’t quite fit what we need.
 
-  There’s a CSS fix for that! We can use the CSS `display` property to override the default and tell the browser how to display our elements. 
-  
-  Let's look at four common `display` values:
-  * `none`: The element won’t display at all.
-  * `inline`: The element will display in one horizontal line.
-  * `block`: The element will appear stacked and take up the entire width of the page.
-  * `inline-block`: Elements will sit next to each other (inline) but can have `margin`, `padding`, `width`, and `height` properties (block).
+- Ever added an `<img>` and wished it took up its own line instead of sitting next to text? By default, images are **inline elements**, but we might want them to act like **block elements** instead.
+- Or maybe you’ve seen a `<ul>` where all the items appear in a row instead of stacking? That’s because even though lists are naturally **block elements**, we can make them **inline** if we want them to display side by side like in a nav bar.
+
+Thankfully, CSS makes this easy! We can use the **`display` property** to change how elements behave on a webpage.
+
+### **Common `display` Values:**
+
+- **`none`** – The element **disappears completely** (it won’t take up space on the page).
+- **`inline`** – The element stays **in line** with surrounding content.
+- **`block`** – The element stacks **on its own line** and takes up the **full width** available.
+- **`inline-block`** – The element stays **inline** but behaves like a **block**, meaning it can have `margin`, `padding`, `width`, and `height`.
+
+With the `display` property, you can **control how elements are arranged** and adjust them to fit your design!
 
 ---
 
@@ -105,10 +120,22 @@ What do we do when we have an element that is _naturally_ inline, such as an `<i
 Let’s say you’ve added four images in HTML, like so:
 
 ```html
-<img src="img/firstpic.png" alt="first pic"/>
-<img src="img/secondpic.png" alt="second pic"/>
-<img src="img/thirdpic.png" alt="third pic"/>
-<img src="img/fourthpic.png" alt="fourth pic"/>
+<img
+  src="img/firstpic.png"
+  alt="first pic"
+/>
+<img
+  src="img/secondpic.png"
+  alt="second pic"
+/>
+<img
+  src="img/thirdpic.png"
+  alt="third pic"
+/>
+<img
+  src="img/fourthpic.png"
+  alt="fourth pic"
+/>
 ```
 
 How could you use the CSS `display` property to stack these images on top of each other in a vertical column?
@@ -131,122 +158,152 @@ Hannah would like us to create a **horizontal navigation bar** for her page, but
 
 Which of the following elements should we target with this `display` property to fix the `<nav>`?
 
-  <fieldset>
-    <legend>Please select one of the following</legend>
-    <input type="radio" name="action" id="event" value="event"  /><label for="event">`nav`</label><br />
-    <input type="radio" name="action" id="message" value="message" /><label for="message">The `ul` in the `nav`</label><br />  
-    <input type="radio" name="action" id="track" value="track" correct="true"/><label for="track">The `li`s in the `nav`</label><br />
-  </fieldset>
-  <button class="ant-btn ant-btn-primary multiple-choice-radio-submit">Submit Answer</button>
+<fieldset>
+  <legend>Please select one of the following</legend>
+  <input type="radio" name="action" id="event" value="event"  /><label for="event">`nav`</label><br />
+  <input type="radio" name="action" id="message" value="message" /><label for="message">The `ul` in the `nav`</label><br />  
+  <input type="radio" name="action" id="track" value="track" correct="true"/><label for="track">The `li`s in the `nav`</label><br />
+</fieldset>
+<button class="ant-btn ant-btn-primary multiple-choice-radio-submit">Submit Answer</button>
 
-  ---
+---
 
 <h1 class="slide-header">Cleaning Up Our Nav</h1>
 
-Let’s make a few final adjustments to the `<nav>`. It would look better in the middle of the page, and we could enlarge it to increase its visibility.
+Right now, the navigation links are stacking **vertically**, one on top of the other. But we want them to sit **side by side** in a row.
 
-  To make these adjustments, we need to set the rules on the parent element; in this case, the `<ul>`. Here’s how that looks:
-  ```css
-  nav ul {
-   text-align: center;
-   font-size: 18px;
-  }
-  ```
-  
-  Notice how we’re taking a slightly different approach to targeting. Even though we didn’t assign a class to this `<ul>`, we can target it specifically by adding the parent element into the rule. Because this `<ul>` is inside the `<nav>`, we’ll write `nav ul` in the rule. Leaving a space between these two elements indicates the parent/child relationship.
+To do this, we need to change how the **list items (`<li>`)** are displayed. By default, `<li>` elements are **block elements**, which means they stack on top of each other. We can fix this by changing the **`display` property** in CSS.
 
-    <iframe   sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Cleaning Up Our Nav" src="https://codepen.io/GAmarketing/embed/eYoBPLJ?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-      See the Pen <a href="https://codepen.io/GAmarketing/pen/eYoBPLJ">
-      Cleaning Up Our Nav</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
-      on <a href="https://codepen.io">CodePen</a>.
-    </iframe>
-  ---
+**1. In your HTML, find the `<li>` elements inside the navigation menu. Give each `<li>` a class called `nav-item`.**
+
+**2. Create a CSS rule for `.nav-item`. Set `display: inline-block;` so the list items sit _side by side_ instead of stacking.**
+
+Once you apply these styles, your navigation links will **line up horizontally** instead of stacking vertically. Try it out and see the difference!
+
+<!-- adjusting-layout-with-css-hannahs-site-9 -->
+<iframe   sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Cleaning Up Our Nav" src="https://codepen.io/GAmarketing/embed/bNGRObx?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/GAmarketing/pen/bNGRObx">
+  Cleaning Up Our Nav</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+**TIP** If your tests still fail after adding your style code, try hitting the **"Rerun"** button on CodePen to ensure all styles are applied before selecting **View Test Results**.
+
+---
 
 <h1 class="slide-header">Everything is a Box</h1>
 
-Remember how we mentioned that block elements can have `margin`, `padding`, `width`, and `height` properties?
+Remember how we mentioned that **block** elements can have `margin`, `padding`, `width`, and `height` properties?
 
-These properties comprise what we call the CSS “box model.” Think of any HTML element as having a “box” that wraps around its content and determines its total height and width.
+This idea is called the **CSS box model**, and it helps define **spacing, sizing, and layout**. Even though we don’t always see these boxes, they control how elements fit together on the page.
 
-Here’s what’s in that box:
-* The **content** within the box, or whatever you added in the HTML.
-* The **padding**, or the space that wraps around the content and pushes the borders of the box away.
-* The **border** around the content and padding (which can be styled).
-* The **margin**, or the space around the border that pushes the element away from other elements on the page.
+**What’s Inside the Box?**
 
-![link text](https://ga-instruction.s3.amazonaws.com/assets/intro-tech/css-unit-assets/content-padding-border-margin.png)
+1. **Content** – The actual text, image, or element inside the box (whatever you wrote in the HTML).
+2. **Padding** – The space **between the content and the border**, pushing the edges of the box outward.
+3. **Border** – The outer edge of the element (can be visible or invisible, depending on styles).
+4. **Margin** – The space **outside the border**, pushing the element away from other elements.
 
----
+Each of these properties affects **how big an element appears and how much space it takes up on the page**.
 
-<h1 class="slide-header">The Box Model</h1>
-
-Check out the following code snippet and how it renders.
-
-See how there’s some space around the text before the blue border? That’s the **padding** pushing the edge of the box away from the content. And see how there’s space between the box and the other text elements on the page? That’s the **margin** pushing other content away from the element.
-
-Margin and padding help us space out elements on the page and organize how they appear:
-
-![](https://ga-instruction.s3.amazonaws.com/assets/intro-tech/css-unit-assets/box-model.png)
+<img src="./assets/box-model.png" alt="The Box Model Diagram" style="width:800px;"/>
 
 ---
 
-<h1 class="slide-header">Knowledge Check</h1>
+<h1 class="slide-header">The Box Model in Action</h1>
 
-We want to add some space around the `<nav>` so that it’s separated from `<h1>` and `<h2>`. Which property would we use?
+Take a look at the code snippet below and how it appears on the page.
 
-  <fieldset>
-    <legend>Please select one of the following</legend>
-    <input type="radio" name="action" id="track" value="track" correct="true"/><label for="track">`margin`</label><br />
-    <input type="radio" name="action" id="event" value="event"  /><label for="event">`padding`</label><br />
-  </fieldset>
-  <button class="ant-btn ant-btn-primary multiple-choice-radio-submit">Submit Answer</button>
+- The **padding (20px)** creates space **inside the box**, pushing the text away from the blue border.
+- The **margin (40px)** creates space **outside the box**, pushing it away from surrounding elements.
+
+Both **margin** and **padding** are essential for organizing content and making a webpage easier to read.
+
+<img src="./assets/box-model-example.png" alt="The Box Model Example" style="width:800px;"/>
 
 ---
 
 <h1 class="slide-header">Knowledge Check</h1>
 
-We’d also like to add more space inside of the `<li>`s in the `<nav>` (“About Me,” “Portfolio,” etc.) so that it’s more obvious that they’re separate items. Which property would we use to accomplish this?
+Imagine you want to create space **around** the `<nav>` element so that it doesn’t sit too close to the `<header>` and `<h2>`.
 
-  <fieldset>
-    <legend>Please select one of the following</legend>
-    <input type="radio" name="action" id="track" value="track" /><label for="track">`margin`</label><br />
-    <input type="radio" name="action" id="event" value="event"  correct="true" /><label for="event">`padding`</label><br />
-  </fieldset>
-  <button class="ant-btn ant-btn-primary multiple-choice-radio-submit">Submit Answer</button>
+Which CSS property would you use to **push the `<nav>` away from the surrounding elements**?
 
-  ---
+<fieldset>
+  <legend>Please select one of the following</legend>
+  <input type="radio" name="action" id="track" value="track" correct="true"/><label for="track">`margin`</label><br />
+  <input type="radio" name="action" id="event" value="event"  /><label for="event">`padding`</label><br />
+</fieldset>
 
-<h1 class="slide-header">Specific Margins and Padding</h1>
+<button class="ant-btn ant-btn-primary multiple-choice-radio-submit">Submit Answer</button>
 
-So far, we’ve been adding margins and padding to all sides of an HTML element. However, you can also specify the sides of the box you want to adjust — maybe you only want to add padding to the top, or add more to the left than the right.
+---
 
-To do so, you’d write the CSS like so:
+<h1 class="slide-header">Knowledge Check</h1>
+
+Imagine you want to add more space **inside** each `<li>` in the `<nav>` (“About Me,” “Portfolio,” etc.) to make them easier to read and visually distinct.
+
+Which CSS property would you use to **increase the space inside each list item**?
+
+<fieldset>
+  <legend>Please select one of the following</legend>
+  <input type="radio" name="action" id="track" value="track" /><label for="track">`margin`</label><br />
+  <input type="radio" name="action" id="event" value="event"  correct="true" /><label for="event">`padding`</label><br />
+</fieldset>
+<button class="ant-btn ant-btn-primary multiple-choice-radio-submit">Submit Answer</button>
+
+---
+
+<h1 class="slide-header">Applying Margin and Padding</h1>
+
+So far, we’ve seen how to apply **equal** margins and padding to all sides of an element. But what if you only want to adjust **one side**—like adding extra space to the top or increasing the padding on the left?
+
+You can _specify individual sides_ by listing values in a specific order:
+
 ```css
 div {
- padding: 10px 0px 5px 15px;
+  padding: 10px 0px 5px 15px;
 }
 ```
 
-This means that the top of the `<div>` gets 10px of `padding`, the right side gets none, the bottom gets 5px, and the left side gets 15px. The acronym **TR**ou**BL**e can help you remember this order!
+The values follow this pattern:
 
-![link text](https://ga-instruction.s3.amazonaws.com/assets/intro-tech/css-unit-assets/top-right-bottom-left.png)
+- **Top** → `10px`
+- **Right** → `0px`
+- **Bottom** → `5px`
+- **Left** → `15px`
+
+This order always follows a **clockwise direction**: **Top → Right → Bottom → Left**.
+
+<img src="./assets/top-right-bottom-left.png" alt="Top Right Bottom Left Model" style="width:400px;"/>
 
 ---
 
-<h1 class="slide-header">Adjusting Width and Height</h1>
+<h1 class="slide-header">Adjusting our Content</h1>
 
-The `width` and `height` properties control — you guessed it — an element’s width and height.
+Now that we know how to use **margin and padding**, let’s apply them to improve the spacing in our layout. This will help create a more balanced and visually appealing design.
 
-Take a look at the icons in the social media list. They’re huge! Luckily, we can change their size by adjusting their `width` property. 
+**1. Find the `<header>` element in your CSS. Set `padding` to `20px` to add space inside the header.**
 
-To fix it, add in the CSS rule below. Because we only want to apply this sizing to the `<img>` tags in the social list, make sure to target them with their class.
-```css
-.social img {
-  width: 30px;
-}
-```
+**2. Find the `<nav>` element in your CSS. Set `padding` to `10px 0;` so there’s vertical space inside the navigation bar but no extra space on the sides.**
 
-We only need to set the width of the images, as the browser will automatically adjust the height proportionally. In other words, our images won’t get distorted! If we set a defined height _as well as_ a defined width, we could end up stretching them out.
+**3. Find the `.nav-item` class in your CSS. Set `margin` to `0 20px;` so each item has 20px of horizontal space between them but no extra space above or below.**
+
+Once you've added these styles, check the webpage and see how much better everything looks with proper spacing!
+
+<iframe   sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Adjusting Width and Height" src="https://codepen.io/GAmarketing/embed/KwKqbNj?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/GAmarketing/pen/KwKqbNj">
+  Adjusting Width and Height</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+**TIP** If your tests still fail after adding your style code, try hitting the **"Rerun"** button on CodePen to ensure all styles are applied before selecting **View Test Results**.
+
+--- TKTKTKTKTKTK Stopped HERE
+
+<h1 class="slide-header">Adjusting Width and Height in Image Gallery</h1>
+
+TKTK adjust the size of the images in the gallery and add flex to them with box shadow
 
 <iframe   sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Adjusting Width and Height" src="https://codepen.io/GAmarketing/embed/JjVbmaN?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/GAmarketing/pen/JjVbmaN">
@@ -266,20 +323,25 @@ Before jumping into the code, think through how you’d target those `<img>`s sp
 
 <h1 class="slide-header">Here's How We Did It</h1>
 
-We added an ID to the `<div>` surrounding the images so that we could target them specifically. (A class could also work here, and you could name it whatever you want.) 
+We added an ID to the `<div>` surrounding the images so that we could target them specifically. (A class could also work here, and you could name it whatever you want.)
 
 The HTML now reads:
+
 ```html
-<div id = "image-grid">
- <img src="https://a4f42852c57948e7b836e53123af7b1a.production.codepen.plumbing/img/coeur.jpg" alt = "artwork"/>
- ...
+<div id="image-grid">
+  <img
+    src="https://a4f42852c57948e7b836e53123af7b1a.production.codepen.plumbing/img/coeur.jpg"
+    alt="artwork"
+  />
+  ...
 </div>
 ```
 
 Then, we added a CSS rule targeting the images in the `<div>` with a `width` property:
+
 ```css
 #image-grid img {
- width: 250px;
+  width: 250px;
 }
 ```
 
@@ -290,16 +352,18 @@ Then, we added a CSS rule targeting the images in the `<div>` with a `width` pro
 Our last layout tool, the `position` property, helps us determine how our elements are positioned on a page. Do we want an element to sit all the way to the right? Or at the very bottom? Adjusting its `position` will accomplish that!
 
 We’ll look at two common `position` values:
-* **_Relative_** positioning means that the element is positioned relative to its normal position on the page — where it is already located. Other content won’t be affected by it.
-* **_Absolute_** positioning means that the element’s position is adjusted relative to a parent element with a set position. If it has no parent element, or if the parent doesn’t have a set position, it will be adjusted relative to the `<body>` of the document.
+
+- **_Relative_** positioning means that the element is positioned relative to its normal position on the page — where it is already located. Other content won’t be affected by it.
+- **_Absolute_** positioning means that the element’s position is adjusted relative to a parent element with a set position. If it has no parent element, or if the parent doesn’t have a set position, it will be adjusted relative to the `<body>` of the document.
 
 ---
 
 <h1 class="slide-header">Positioning Our Elements</h1>
 
-Once we tell an element _how_ it should be displayed, let’s get it to display _where_ we want. We can do this by targeting the `top`, `right`, `bottom`, and `left` properties. These properties take distance values, like pixels, that measure based on the point _from which_ we would like to place our element. 
+Once we tell an element _how_ it should be displayed, let’s get it to display _where_ we want. We can do this by targeting the `top`, `right`, `bottom`, and `left` properties. These properties take distance values, like pixels, that measure based on the point _from which_ we would like to place our element.
 
 For example, this styling would push the `<div>` 20px **away from the top** of the page and 10px **away from the left side** of the page:
+
 ```css
 div {
   position: absolute;
@@ -307,6 +371,7 @@ div {
   left: 10px;
 }
 ```
+
 **Remember**: You’ll need to add the `position` property (`relative` or `absolute`), as well as the directions to get an object to move.
 
 ---
@@ -318,13 +383,15 @@ Setting `position: relative` moves an element relative to its original location.
 Let’s say we start out with two colored `<div>`s of the same size. With no set positioning, as block elements, they’re stacked on top of each other and begin in the top-left corner of the page.
 
 If we add in some relative positioning to the top yellow `<div>`...
+
 ```css
 #yellow {
- position: relative;
- top: 100px;
- left: 100px;
+  position: relative;
+  top: 100px;
+  left: 100px;
 }
 ```
+
 ... we’d end up with the format on the right! The `position-relative` property will push the yellow block 100px away from where it started at the top and 100px away from where it started at the left.
 
 <img src="https://ga-instruction.s3.amazonaws.com/assets/intro-tech/css-unit-assets/no-positioning-relative-positioning.png">
@@ -333,15 +400,15 @@ If we add in some relative positioning to the top yellow `<div>`...
 
 <h1 class="slide-header">Position: Absolute</h1>
 
-Using `position: absolute` will move an element relative to a parent element with a set position, or to the body of the page. 
+Using `position: absolute` will move an element relative to a parent element with a set position, or to the body of the page.
 
 For example, the yellow `<div>` starts out in the upper left-hand corner. Because it doesn’t have a parent element, when we add absolute positioning, it’s positioned against the `<body>`. The `right` and `top` properties define where it goes. (When one of these properties, like `right`, is set to `0`, it means that the element is 0px away from this side — all the way against it.)
 
 ```css
 div {
- position: absolute;
- right: 0;
- top: 80px;
+  position: absolute;
+  right: 0;
+  top: 80px;
 }
 ```
 
@@ -369,7 +436,8 @@ What type of positioning would we use?
 <a href="https://codepen.io/GAmarketing/pen/dLqmVb?editors=1100" target="_blank" rel="noreferrer noopener">Here’s</a> how Hannah’s site will look with its fancy new layout.
 
 And here are some more resources on CSS layouts:
-* <a href="http://learnlayout.com/display.html" target="_blank" rel="noreferrer noopener">Display Property</a>.
-* <a href="http://learnlayout.com/position.html" target="_blank" rel="noreferrer noopener">Positioning in CSS</a>.
 
-</textarea>
+- <a href="http://learnlayout.com/display.html" target="_blank" rel="noreferrer noopener">Display Property</a>.
+- <a href="http://learnlayout.com/position.html" target="_blank" rel="noreferrer noopener">Positioning in CSS</a>.
+
+<!-- </textarea> -->
