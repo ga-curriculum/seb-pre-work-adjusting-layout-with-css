@@ -1,4 +1,4 @@
-<!-- <textarea id="source"> -->
+<textarea id="source">
 
 <h1 class="slide-header">Adjusting Layout with CSS</h1>
 
@@ -100,7 +100,7 @@ Anchor `<a>`, span `<span>`, and image `<img>` elements all line up **side by si
 Sometimes, an element’s default behavior doesn’t quite fit what we need.
 
 - Ever added an `<img>` and wished it took up its own line instead of sitting next to text? By default, images are **inline elements**, but we might want them to act like **block elements** instead.
-- Or maybe you’ve seen a `<ul>` where all the items appear in a row instead of stacking? That’s because even though lists are naturally **block elements**, we can make them **inline** if we want them to display side by side like in a nav bar.
+- Ever added a `<ul>` and expected the list items to stack, but wanted them to sit side by side instead? By default, lists are **block elements**, but we can make them **inline** to display items in a row, like in a navigation bar.
 
 Thankfully, CSS makes this easy! We can use the **`display` property** to change how elements behave on a webpage.
 
@@ -154,7 +154,7 @@ How could you use the CSS `display` property to stack these images on top of eac
 
 <h1 class="slide-header">Knowledge Check</h1>
 
-Hannah would like us to create a **horizontal navigation bar** for her page, but right now the `<nav>` is displaying a vertical list. Sounds like a job for `display: inline`!
+Hannah would like us to create a **horizontal navigation bar** for her page, but right now the `<nav>` is displaying a vertical list. Sounds like a job for `display: inline-block`!
 
 Which of the following elements should we target with this `display` property to fix the `<nav>`?
 
@@ -177,8 +177,6 @@ To do this, we need to change how the **list items (`<li>`)** are displayed. By 
 **1. In your HTML, find the `<li>` elements inside the navigation menu. Give each `<li>` a class called `nav-item`.**
 
 **2. Create a CSS rule for `.nav-item`. Set `display: inline-block;` so the list items sit _side by side_ instead of stacking.**
-
-Once you apply these styles, your navigation links will **line up horizontally** instead of stacking vertically. Try it out and see the difference!
 
 <!-- adjusting-layout-with-css-hannahs-site-9 -->
 <iframe   sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Cleaning Up Our Nav" src="https://codepen.io/GAmarketing/embed/bNGRObx?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
@@ -279,19 +277,44 @@ This order always follows a **clockwise direction**: **Top → Right → Bottom 
 
 ---
 
-<h1 class="slide-header">Adjusting our Content</h1>
+<h1 class="slide-header">Shorthand Notation for Box-Model Properties</h1>
+
+CSS allows us to use **shorthand notation** to apply spacing (like `margin` or `padding`) more efficiently. Instead of writing separate properties for each side, shorthand lets us define multiple values in a single line.
+
+**One value** → Applies the same spacing to **all four sides**
+
+```css
+padding: 10px; /* 10px on top, right, bottom, and left */
+```
+
+**Two values** → First value applies to **top & bottom**, second applies to **left & right**
+
+```css
+padding: 10px 20px; /* 10px on top & bottom, 20px on left & right */
+```
+
+Shorthand notation makes your CSS **cleaner, easier to read, and faster to write**!
+
+---
+
+<h1 class="slide-header">Adjusting our Content Spacing</h1>
 
 Now that we know how to use **margin and padding**, let’s apply them to improve the spacing in our layout. This will help create a more balanced and visually appealing design.
 
-**1. Find the `<header>` element in your CSS. Set `padding` to `20px` to add space inside the header.**
+**1. Find the `<header>` element in your CSS. Set `padding` to `20px 0;` to add vertical space to the top and bottom of the header, but no extra space on the sides.**
 
-**2. Find the `<nav>` element in your CSS. Set `padding` to `10px 0;` so there’s vertical space inside the navigation bar but no extra space on the sides.**
+**2. Find the `<nav>` element in your CSS. Set `padding` to `10px 0;` to add vertical space on the top and bottom of the navigation bar, but no extra space on the sides.**
 
-**3. Find the `.nav-item` class in your CSS. Set `margin` to `0 20px;` so each item has 20px of horizontal space between them but no extra space above or below.**
+**3. Find the `.nav-item` class in your CSS. Set `margin` to `0 20px;` so each item has `20px` of space on each side but no extra space on the top or bottom.**
+
+By default, web browsers add _extra margin_ around the `<body>` element, which prevents content from reaching the very edges of the page. Removing this margin helps create a cleaner, more polished look.
+
+**4. In your CSS, find the rule for `body`. Add `margin: 0;` to remove the default spacing on _all sides_.**
 
 Once you've added these styles, check the webpage and see how much better everything looks with proper spacing!
 
-<iframe   sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Adjusting Width and Height" src="https://codepen.io/GAmarketing/embed/KwKqbNj?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<!-- adjusting-layout-with-css-hannahs-site-10 -->
+<iframe   sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Adjusting our Content Spacing" src="https://codepen.io/GAmarketing/embed/KwKqbNj?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/GAmarketing/pen/KwKqbNj">
   Adjusting Width and Height</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -299,14 +322,146 @@ Once you've added these styles, check the webpage and see how much better everyt
 
 **TIP** If your tests still fail after adding your style code, try hitting the **"Rerun"** button on CodePen to ensure all styles are applied before selecting **View Test Results**.
 
---- TKTKTKTKTKTK Stopped HERE
+---
 
-<h1 class="slide-header">Adjusting Width and Height in Image Gallery</h1>
+<h1 class="slide-header">The Position Property</h1>
 
-TKTK adjust the size of the images in the gallery and add flex to them with box shadow
+The `position` property controls **where elements appear on the page**. Do you want something to shift slightly from its normal spot? Or do you need it to be placed in a _specific_ location? The `position` property helps with that!
 
-<iframe   sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Adjusting Width and Height" src="https://codepen.io/GAmarketing/embed/JjVbmaN?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/GAmarketing/pen/JjVbmaN">
+Here are the most commonly used values:
+
+- **`relative`** – Moves an element **relative to where it normally appears**, without affecting other content.
+- **`absolute`** – Moves an element **relative to its nearest positioned parent**, or to the entire page if no positioned parent exists.
+- **`fixed`** – Keeps an element **locked in place**, even when scrolling (think about a navigation bar that stays fixed at the top of the page).
+
+These positioning options give you more control over your layout by making possible to control the position of specific elements.
+
+---
+
+<h1 class="slide-header">Positioning Elements</h1>
+
+Now that we’ve set _how_ an element is positioned, let’s control _where_ it appears on the page.
+
+We can do this using the **`top`**, **`right`**, **`bottom`**, and **`left`** properties. These values define the **distance from a reference point**, measured in pixels `px` or other units.
+
+For these properties to work, the element **must have a `position` value** (`relative`, `absolute`, `fixed`, or `sticky`). Without it, the `top`, `left`, `right`, and `bottom` properties **won’t do anything**!
+
+Let's take a look at an example...
+
+---
+
+<h1 class="slide-header">Position: Relative</h1>
+
+When you set an element to **`position: relative`**, it moves **relative to its original position** on the page—without affecting other elements around it.
+
+We’ll start with **two stacked `<div>`'s**—one yellow and one blue. By default, as block elements, they sit on top of each other in the top-left corner of the page.
+
+Now, let’s apply **relative positioning** to the **yellow** `<div>`:
+
+```css
+#yellow {
+  /* Other styles above */
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+```
+
+**What Happens?**
+
+- If you said **_nothing_**, you are correct! We told the box to move `0px` from the left and `0px` from the top of where it was relatively positioned. In other words...where it started. Therefore, it didn't move.
+
+**Now try the following:**
+
+- `left: 100px;` → Moves the yellow box **100 pixels away from the left edge** of its original position
+- `top: 20px;` → Moves the yellow box **20 away from the top** of its original position.
+- The **blue box does not move**—only the yellow box is affected!
+
+> Try experimenting with **negative values** (`left: -50px;`) to see how the movement changes!
+
+<!-- position-properties-in-action -->
+<iframe   sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Position Properties in Action" src="https://codepen.io/GAmarketing/embed/LEYjwmW?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/GAmarketing/pen/LEYjwmW">
+  Adjusting Width and Height</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+---
+
+<h1 class="slide-header">Position: Absolute</h1>
+
+When an element has **`position: absolute`**, it moves **relative to its nearest positioned parent** (a parent element with `relative`, `absolute`, or `fixed` positioning).
+
+**If no parent has a set position**, the element is positioned **relative to the entire page `<body>`**.
+
+Let’s apply **absolute positioning** to the **blue** `<div>`:
+
+```css
+#blue {
+  /* Other styles above */
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+```
+
+**What Happens?**
+
+- The **blue box jumps to the very top-left corner** of the page (`left: 0px;`, `top: 0px;`).
+- Since **absolute positioning removes it from the normal flow**, the blue box now **overlaps the yellow box** instead of stacking below it.
+
+**Now try the following:**
+
+- Change `left: 100px;` → Moves it **100px to the right**.
+- Change `top: 50px;` → Moves it **50px down**.
+
+- Change `top: 20px;` → `bottom: 20px;` Now, instead of moving down from the top, the box moves **up from the bottom**.
+
+Try experimenting with **negative values** `left: -20px;` to see how the movement changes!
+
+<!-- position-properties-in-action -->
+<iframe   sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Position Properties in Action" src="https://codepen.io/GAmarketing/embed/LEYjwmW?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/GAmarketing/pen/LEYjwmW">
+  Adjusting Width and Height</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+---
+
+<h1 class="slide-header">Position: Fixed</h1>
+
+When an element has **`position: fixed`**, it **stays in place on the screen**, no matter how much you scroll.
+
+Unlike `relative` or `absolute`, a **fixed element is not affected by other elements and does not move with the page**—it remains stuck to a set position relative to the **viewport** (the visible screen area).
+
+Let's’ll apply **fixed positioning** to the **blue** `<div>`:
+
+```css
+#blue {
+  /* Other styles above */
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+```
+
+Now let's increase the hight of the body so we have room to scroll. Try it!
+
+```css
+body {
+  height: 1000px;
+}
+```
+
+**What Happens?**
+
+- The **blue box is locked in the top-left corner** of the screen (`left: 0px;`, `top: 0px;`).
+- **Even when you scroll**, the blue box **stays in place** instead of moving with the page.
+- The yellow box will **scroll normally**, but the blue box does not- it is _fixed_.
+
+<!-- position-properties-in-action -->
+<iframe   sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Position Properties in Action" src="https://codepen.io/GAmarketing/embed/LEYjwmW?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/GAmarketing/pen/LEYjwmW">
   Adjusting Width and Height</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
@@ -315,129 +470,83 @@ TKTK adjust the size of the images in the gallery and add flex to them with box 
 
 <h1 class="slide-header">Knowledge Check</h1>
 
-Let’s try this out with the images of Hannah’s artwork! Right now, they are a bit all over the place. We should give them the same width so they look more consistent.
-
-Before jumping into the code, think through how you’d target those `<img>`s specifically. In the HTML, they’re grouped together in a `<div>`. What could we add to the `<div>` to make it easier to target the `<img>`s it contains?
-
----
-
-<h1 class="slide-header">Here's How We Did It</h1>
-
-We added an ID to the `<div>` surrounding the images so that we could target them specifically. (A class could also work here, and you could name it whatever you want.)
-
-The HTML now reads:
-
-```html
-<div id="image-grid">
-  <img
-    src="https://a4f42852c57948e7b836e53123af7b1a.production.codepen.plumbing/img/coeur.jpg"
-    alt="artwork"
-  />
-  ...
-</div>
-```
-
-Then, we added a CSS rule targeting the images in the `<div>` with a `width` property:
-
-```css
-#image-grid img {
-  width: 250px;
-}
-```
-
----
-
-<h1 class="slide-header">The Position Property</h1>
-
-Our last layout tool, the `position` property, helps us determine how our elements are positioned on a page. Do we want an element to sit all the way to the right? Or at the very bottom? Adjusting its `position` will accomplish that!
-
-We’ll look at two common `position` values:
-
-- **_Relative_** positioning means that the element is positioned relative to its normal position on the page — where it is already located. Other content won’t be affected by it.
-- **_Absolute_** positioning means that the element’s position is adjusted relative to a parent element with a set position. If it has no parent element, or if the parent doesn’t have a set position, it will be adjusted relative to the `<body>` of the document.
-
----
-
-<h1 class="slide-header">Positioning Our Elements</h1>
-
-Once we tell an element _how_ it should be displayed, let’s get it to display _where_ we want. We can do this by targeting the `top`, `right`, `bottom`, and `left` properties. These properties take distance values, like pixels, that measure based on the point _from which_ we would like to place our element.
-
-For example, this styling would push the `<div>` 20px **away from the top** of the page and 10px **away from the left side** of the page:
-
-```css
-div {
-  position: absolute;
-  top: 20px;
-  left: 10px;
-}
-```
-
-**Remember**: You’ll need to add the `position` property (`relative` or `absolute`), as well as the directions to get an object to move.
-
----
-
-<h1 class="slide-header">Position: Relative</h1>
-
-Setting `position: relative` moves an element relative to its original location.
-
-Let’s say we start out with two colored `<div>`s of the same size. With no set positioning, as block elements, they’re stacked on top of each other and begin in the top-left corner of the page.
-
-If we add in some relative positioning to the top yellow `<div>`...
-
-```css
-#yellow {
-  position: relative;
-  top: 100px;
-  left: 100px;
-}
-```
-
-... we’d end up with the format on the right! The `position-relative` property will push the yellow block 100px away from where it started at the top and 100px away from where it started at the left.
-
-<img src="https://ga-instruction.s3.amazonaws.com/assets/intro-tech/css-unit-assets/no-positioning-relative-positioning.png">
-
----
-
-<h1 class="slide-header">Position: Absolute</h1>
-
-Using `position: absolute` will move an element relative to a parent element with a set position, or to the body of the page.
-
-For example, the yellow `<div>` starts out in the upper left-hand corner. Because it doesn’t have a parent element, when we add absolute positioning, it’s positioned against the `<body>`. The `right` and `top` properties define where it goes. (When one of these properties, like `right`, is set to `0`, it means that the element is 0px away from this side — all the way against it.)
-
-```css
-div {
-  position: absolute;
-  right: 0;
-  top: 80px;
-}
-```
-
-![link text](https://ga-instruction.s3.amazonaws.com/assets/intro-tech/css-unit-assets/no-positioning-absolute-positioning.png)
-
----
-
-<h1 class="slide-header">Knowledge Check</h1>
-
-Let’s look at the social icons on Hannah’s website, which are listed in a `<ul>`. They’re taking up a lot of space on the page, don’t you think? Let’s get them out of the way and stick them in the upper right-hand corner.
-
-What type of positioning would we use?
+Which `position` value moves an element relative to where it originally appears on the page, without affecting other elements?
 
 <fieldset>
   <legend>Please select one of the following</legend>
-  <input type="radio" name="action" id="track" value="track" /><label for="track">`relative`</label><br />
-  <input type="radio" name="action" id="event" value="event"  correct="true" /><label for="event">`absolute`</label><br />
+  <input type="radio" name="action" id="track" value="track" correct="true"/><label for="track">`relative`</label><br />
+  <input type="radio" name="action" id="event" value="event"/><label for="event">`absolute`</label><br />
 </fieldset>
 <button class="ant-btn ant-btn-primary multiple-choice-radio-submit">Submit Answer</button>
 
 ---
 
+<h1 class="slide-header">Knowledge Check</h1>
+
+Which `position` value keeps an element locked in place on the screen, even when the page is scrolled?
+
+<fieldset>
+  <legend>Please select one of the following</legend>
+  <input type="radio" name="action" id="event" value="event"/><label for="event">`absolute`</label><br />
+  <input type="radio" name="action" id="track" value="track" correct="true"/><label for="track">`fixed`</label><br />
+</fieldset>
+<button class="ant-btn ant-btn-primary multiple-choice-radio-submit">Submit Answer</button>
+
+---
+
+<h1 class="slide-header">Knowledge Check</h1>
+
+Which `position` value removes an element from the normal document flow and positions it relative to its closest positioned parent (or the entire page if no parent is positioned)?
+
+<fieldset>
+  <legend>Please select one of the following</legend>
+  <input type="radio" name="action" id="event" value="event"/><label for="event">`fixed`</label><br />
+  <input type="radio" name="action" id="track" value="track" correct="true"/><label for="track">`absolute`</label><br />
+</fieldset>
+<button class="ant-btn ant-btn-primary multiple-choice-radio-submit">Submit Answer</button>
+
+---
+
+<h1 class="slide-header">Adjusting the Image Gallery</h1>
+
+Now, let’s shift our focus to the **most important part of the page—Hannah’s artwork!** The image gallery looks great, but with a few refinements, we can make it **stand out** and look more polished.
+
+1. **In your HTML, find the `<div>` that holds all the artwork images. Add an `id="image-container"` to this `<div>`.**
+
+2. **Using the CSS selector: `#image-container img` create a rule that targets each image inside `#image-container`.**
+
+3. **Apply these styling properties:**
+   - **Rounded corners: Add `border-radius: 8px;` to make the image edges slightly curved.**
+   - **Subtle shadow effect: Add `box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);` to create a soft, 3D effect that makes the images pop off the page.**
+
+Once you apply these changes, Hannah’s artwork will look even more professional and visually appealing!
+
+<!-- adjusting-layout-with-css-hannahs-site-11 -->
+<iframe   sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Adjusting our Content Spacing" src="https://codepen.io/GAmarketing/embed/ZYEXzZX?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/GAmarketing/pen/ZYEXzZX">
+  Adjusting Width and Height</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+---
+
 <h1 class="slide-header">Conclusion</h1>
 
-<a href="https://codepen.io/GAmarketing/pen/dLqmVb?editors=1100" target="_blank" rel="noreferrer noopener">Here’s</a> how Hannah’s site will look with its fancy new layout.
+Hannah’s site is looking great! But wait… we didn’t actually use any of our new positioning techniques?
 
-And here are some more resources on CSS layouts:
+<img src="./assets/website-progress-3.png" alt="Hannah's Site Progress" style="width:600px"/>
 
-- <a href="http://learnlayout.com/display.html" target="_blank" rel="noreferrer noopener">Display Property</a>.
-- <a href="http://learnlayout.com/position.html" target="_blank" rel="noreferrer noopener">Positioning in CSS</a>.
+<br>
 
-<!-- </textarea> -->
+That’s because in **modern web development**, we focus on making pages **responsive**—meaning they look good on **all screen sizes**, from desktops to mobile devices. While `position` is useful in some cases, it’s not the best tool for **structuring entire layouts**.
+
+There’s a **better way** to control the placement of multiple elements: **Flexbox!**
+
+In our next lesson, we’ll explore **Flexbox**, a powerful tool that makes **aligning, spacing, and organizing layouts easier and more flexible**.
+
+For more information or resources on CSS display and position properties, check out:
+
+- <a href="http://learnlayout.com/display.html" target="_blank" rel="noreferrer noopener">Learn Layout: The `display` Property</a>
+- <a href="http://learnlayout.com/position.html" target="_blank" rel="noreferrer noopener">Learn Layout: Position</a>
+
+</textarea>
