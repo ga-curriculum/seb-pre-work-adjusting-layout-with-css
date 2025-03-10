@@ -7,9 +7,9 @@
 <p id="lesson-description">
 Have you ever visited a website and had no idea where to look? A cluttered, unorganized layout can make even the best content frustrating to navigate.
 
-With CSS, you have the power to **structure your website** exactly how you want. You'll learn how to control spacing, alignment, and positioning to create a layout that looks great and guides users effortlessly.
+With CSS, you have the power to <strong>structure your website</strong> exactly how you want. You'll learn how to control spacing, alignment, and positioning to create a layout that looks great and guides users effortlessly.
 
-By the end of this lesson, you’ll be designing pages that are **clean, professional, and easy to navigate**—no more confusing websites!
+By the end of this lesson, you’ll be designing pages that are <strong>clean, professional, and easy to navigate</strong>—no more confusing websites!
 
 </p>
 
@@ -104,7 +104,7 @@ Sometimes, an element’s default behavior doesn’t quite fit what we need.
 
 Thankfully, CSS makes this easy! We can use the **`display` property** to change how elements behave on a webpage.
 
-### **Common `display` Values:**
+**Common `display` Values:**
 
 - **`none`** – The element **disappears completely** (it won’t take up space on the page).
 - **`inline`** – The element stays **in line** with surrounding content.
@@ -161,8 +161,9 @@ Which of the following elements should we target with this `display` property to
 <fieldset>
   <legend>Please select one of the following</legend>
   <input type="radio" name="action" id="event" value="event"  /><label for="event">`nav`</label><br />
-  <input type="radio" name="action" id="message" value="message" /><label for="message">The `ul` in the `nav`</label><br />  
+  <input type="radio" name="action" id="message" value="message" /><label for="message">The `ul` in the `nav`</label><br />
   <input type="radio" name="action" id="track" value="track" correct="true"/><label for="track">The `li`s in the `nav`</label><br />
+
 </fieldset>
 <button class="ant-btn ant-btn-primary multiple-choice-radio-submit">Submit Answer</button>
 
@@ -229,8 +230,8 @@ Which CSS property would you use to **push the `<nav>` away from the surrounding
 
 <fieldset>
   <legend>Please select one of the following</legend>
-  <input type="radio" name="action" id="track" value="track" correct="true"/><label for="track">`margin`</label><br />
-  <input type="radio" name="action" id="event" value="event"  /><label for="event">`padding`</label><br />
+  <input type="radio" name="action" id="track" value="track" correct="true"/><label for="track">margin</label><br />
+  <input type="radio" name="action" id="event" value="event"  /><label for="event">padding</label><br />
 </fieldset>
 
 <button class="ant-btn ant-btn-primary multiple-choice-radio-submit">Submit Answer</button>
@@ -245,8 +246,8 @@ Which CSS property would you use to **increase the space inside each list item**
 
 <fieldset>
   <legend>Please select one of the following</legend>
-  <input type="radio" name="action" id="track" value="track" /><label for="track">`margin`</label><br />
-  <input type="radio" name="action" id="event" value="event"  correct="true" /><label for="event">`padding`</label><br />
+  <input type="radio" name="action" id="track" value="track" /><label for="track">margin</label><br />
+  <input type="radio" name="action" id="event" value="event"  correct="true" /><label for="event">padding</label><br />
 </fieldset>
 <button class="ant-btn ant-btn-primary multiple-choice-radio-submit">Submit Answer</button>
 
@@ -344,7 +345,7 @@ Now that we’ve set _how_ an element is positioned, let’s control _where_ it 
 
 We can do this using the **`top`**, **`right`**, **`bottom`**, and **`left`** properties. These values define the **distance from a reference point**, measured in pixels `px` or other units.
 
-For these properties to work, the element **must have a `position` value** (`relative`, `absolute`, `fixed`, or `sticky`). Without it, the `top`, `left`, `right`, and `bottom` properties **won’t do anything**!
+For these properties to work, the element **must have a `position` value** (`relative`, `absolute`, or `fixed`). Without it, the `top`, `left`, `right`, and `bottom` properties **won’t do anything**!
 
 Let's take a look at an example...
 
@@ -377,7 +378,7 @@ Now, let’s apply **relative positioning** to the **yellow** `<div>`:
 - `top: 20px;` → Moves the yellow box **20 away from the top** of its original position.
 - The **blue box does not move**—only the yellow box is affected!
 
-> Try experimenting with **negative values** (`left: -50px;`) to see how the movement changes!
+Try experimenting with **negative values** (`left: -50px;`) to see how the movement changes!
 
 <!-- position-properties-in-action -->
 <iframe   sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Position Properties in Action" src="https://codepen.io/GAmarketing/embed/LEYjwmW?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
@@ -474,8 +475,8 @@ Which `position` value moves an element relative to where it originally appears 
 
 <fieldset>
   <legend>Please select one of the following</legend>
-  <input type="radio" name="action" id="track" value="track" correct="true"/><label for="track">`relative`</label><br />
-  <input type="radio" name="action" id="event" value="event"/><label for="event">`absolute`</label><br />
+  <input type="radio" name="action" id="track" value="track" correct="true"/><label for="track">relative</label><br />
+  <input type="radio" name="action" id="event" value="event"/><label for="event">absolute</label><br />
 </fieldset>
 <button class="ant-btn ant-btn-primary multiple-choice-radio-submit">Submit Answer</button>
 
@@ -487,8 +488,8 @@ Which `position` value keeps an element locked in place on the screen, even when
 
 <fieldset>
   <legend>Please select one of the following</legend>
-  <input type="radio" name="action" id="event" value="event"/><label for="event">`absolute`</label><br />
-  <input type="radio" name="action" id="track" value="track" correct="true"/><label for="track">`fixed`</label><br />
+  <input type="radio" name="action" id="event" value="event"/><label for="event">absolute</label><br />
+  <input type="radio" name="action" id="track" value="track" correct="true"/><label for="track">fixed</label><br />
 </fieldset>
 <button class="ant-btn ant-btn-primary multiple-choice-radio-submit">Submit Answer</button>
 
@@ -500,8 +501,8 @@ Which `position` value removes an element from the normal document flow and posi
 
 <fieldset>
   <legend>Please select one of the following</legend>
-  <input type="radio" name="action" id="event" value="event"/><label for="event">`fixed`</label><br />
-  <input type="radio" name="action" id="track" value="track" correct="true"/><label for="track">`absolute`</label><br />
+  <input type="radio" name="action" id="event" value="event"/><label for="event">fixed</label><br />
+  <input type="radio" name="action" id="track" value="track" correct="true"/><label for="track">absolute</label><br />
 </fieldset>
 <button class="ant-btn ant-btn-primary multiple-choice-radio-submit">Submit Answer</button>
 
@@ -511,11 +512,11 @@ Which `position` value removes an element from the normal document flow and posi
 
 Now, let’s shift our focus to the **most important part of the page—Hannah’s artwork!** The image gallery looks great, but with a few refinements, we can make it **stand out** and look more polished.
 
-1. **In your HTML, find the `<div>` that holds all the artwork images. Add an `id="image-container"` to this `<div>`.**
+**1. In your HTML, find the `<div>` that holds all the artwork images. Add an `id="image-container"` to this `<div>`.**
 
-2. **Using the CSS selector: `#image-container img` create a rule that targets each image inside `#image-container`.**
+**2. Using the CSS selector: `#image-container img` create a rule that targets each image inside `#image-container`.**
 
-3. **Apply these styling properties:**
+**3. Apply these styling properties:**
    - **Rounded corners: Add `border-radius: 8px;` to make the image edges slightly curved.**
    - **Subtle shadow effect: Add `box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);` to create a soft, 3D effect that makes the images pop off the page.**
 
