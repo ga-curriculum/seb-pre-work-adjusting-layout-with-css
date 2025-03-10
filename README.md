@@ -517,8 +517,9 @@ Now, let’s shift our focus to the **most important part of the page—Hannah�
 **2. Using the CSS selector: `#image-container img` create a rule that targets each image inside `#image-container`.**
 
 **3. Apply these styling properties:**
-   - **Rounded corners: Add `border-radius: 8px;` to make the image edges slightly curved.**
-   - **Subtle shadow effect: Add `box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);` to create a soft, 3D effect that makes the images pop off the page.**
+
+- **Rounded corners: Add `border-radius: 8px;` to make the image edges slightly curved.**
+- **Subtle shadow effect: Add `box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);` to create a soft, 3D effect that makes the images pop off the page.**
 
 Once you apply these changes, Hannah’s artwork will look even more professional and visually appealing!
 
