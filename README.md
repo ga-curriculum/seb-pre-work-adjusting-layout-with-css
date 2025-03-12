@@ -186,7 +186,7 @@ To do this, we need to change how the **list items (`<li>`)** are displayed. By 
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
-**TIP** If your tests still fail after adding your style code, try hitting the **"Rerun"** button on CodePen to ensure all styles are applied before selecting **View Test Results**.
+<small><strong>TIP:</strong> After updating your code, click the <strong>"Run"</strong> or <strong>"Rerun"</strong> button in CodePen to make sure your changes take effect. Then, check <strong>View Test Results</strong> to see if your updates pass!</small>
 
 ---
 
@@ -321,7 +321,7 @@ Once you've added these styles, check the webpage and see how much better everyt
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
-**TIP** If your tests still fail after adding your style code, try hitting the **"Rerun"** button on CodePen to ensure all styles are applied before selecting **View Test Results**.
+<small><strong>TIP:</strong> After updating your code, click the <strong>"Run"</strong> or <strong>"Rerun"</strong> button in CodePen to make sure your changes take effect. Then, check <strong>View Test Results</strong> to see if your updates pass!</small>
 
 ---
 
@@ -387,6 +387,8 @@ Try experimenting with **negative values** (`left: -50px;`) to see how the movem
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
+<small><strong>TIP:</strong> After updating your code, click the <strong>"Run"</strong> or <strong>"Rerun"</strong> button in CodePen to make sure your changes take effect. Then, check <strong>View Test Results</strong> to see if your updates pass!</small>
+
 ---
 
 <h1 class="slide-header">Position: Absolute</h1>
@@ -427,6 +429,8 @@ Try experimenting with **negative values** `left: -20px;` to see how the movemen
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
+<small><strong>TIP:</strong> After updating your code, click the <strong>"Run"</strong> or <strong>"Rerun"</strong> button in CodePen to make sure your changes take effect. Then, check <strong>View Test Results</strong> to see if your updates pass!</small>
+
 ---
 
 <h1 class="slide-header">Position: Fixed</h1>
@@ -466,6 +470,8 @@ body {
   Adjusting Width and Height</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
+
+<small><strong>TIP:</strong> After updating your code, click the <strong>"Run"</strong> or <strong>"Rerun"</strong> button in CodePen to make sure your changes take effect. Then, check <strong>View Test Results</strong> to see if your updates pass!</small>
 
 ---
 
@@ -529,6 +535,8 @@ Once you apply these changes, Hannah’s artwork will look even more professiona
   Adjusting Width and Height</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
+
+<small><strong>TIP:</strong> After updating your code, click the <strong>"Run"</strong> or <strong>"Rerun"</strong> button in CodePen to make sure your changes take effect. Then, check <strong>View Test Results</strong> to see if your updates pass!</small>
 
 ---
 
